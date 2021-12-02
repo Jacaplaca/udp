@@ -6,8 +6,19 @@ const { SMSAPI } = sms;
 
 const smsapi = new SMSAPI(oAuthToken);
 
+const details = {
+  from: "ECO",
+  normalize: true
+};
+
 const sendSMS = async (content) => {
-  return await smsapi.sms.sendSms(myPhoneNumber, content);
+  return await smsapi.sms.sendSms(myPhoneNumber, String(content), details);
 };
 
 module.exports = sendSMS
+
+
+
+
+
+
