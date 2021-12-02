@@ -14,7 +14,7 @@ server.on('error', (err) => {
 server.on('message', (msg, rinfo) => {
   console.log(`server got: ${msg} from ${rinfo.address}:${rinfo.port}`);
   sendEmail(msg)
-  // sendSMS(msg)
+  sendSMS(msg)
 });
 
 server.on('listening', () => {
