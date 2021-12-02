@@ -20,7 +20,6 @@ server.on('message', (msg, rinfo) => {
 server.on('listening', () => {
   const address = server.address();
   console.log(`server listening ${address.address}:${address.port}`);
-  sendSMS('server listening')
 });
 
 server.bind({
